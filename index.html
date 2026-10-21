@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050b16">
-  <meta name="description" content="Gabriel Devs — criação de sites, catálogos online, cardápios digitais, tags NFC e soluções tecnológicas personalizadas para seu negócio.">
+  <meta name="description" content="Gabriel Devs — sites profissionais, catálogos e cardápios digitais, NFC, QR Code, impressão 3D e soluções personalizadas em Itu-SP.">
+  <meta property="og:title" content="Gabriel Devs | Soluções Digitais e Impressão 3D">
+  <meta property="og:description" content="Sua ideia, nossa tecnologia. Sites, catálogos, cardápios digitais, NFC, QR Code e impressão 3D.">
+  <meta property="og:type" content="website">
   <title>Gabriel Devs | Soluções em Tecnologia</title>
   <style>
     :root{--bg:#050a13;--panel:#0c1626;--panel2:#0a1220;--line:#20344d;--text:#f4f7ff;--muted:#aab8cb;--cyan:#12c9f5;--blue:#2479ff;--purple:#7749ff;--green:#20d6a0;--radius:20px}
@@ -22,7 +25,30 @@
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:20px;border-top:2px solid #2668bb;background:#0a1422;border-radius:0 0 15px 15px}.step b{font-size:12px;color:var(--cyan);letter-spacing:.1em}.step h3{font-size:16px;margin:8px 0}.step p{font-size:13px;color:var(--muted);margin:0}
     .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.blog-card{padding:22px;border-radius:18px;background:#0b1625;border:1px solid var(--line)}.blog-card .date{font-size:11px;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em}.blog-card h3{font-size:17px;line-height:1.3}.blog-card p{font-size:13px;color:var(--muted)}
     .contact-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px}.contact-info{padding:28px;border-radius:22px;background:linear-gradient(145deg,#102a48,#0a1220);border:1px solid #294a6e}.contact-info h3{font-size:25px;line-height:1.2}.contact-info p{color:#b8c9dd}.contact-line{margin:20px 0;color:#dce8f6;font-size:14px;overflow-wrap:anywhere}.contact-form{padding:28px;border:1px solid var(--line);border-radius:22px;background:#091321}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#c7d5e6;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid #2a4058;background:#050c16;color:white;padding:12px 13px;border-radius:11px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cyan)}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:11px;color:#8195ad}.brief-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px;border:1px solid #2a4058;border-radius:12px;background:#050c16}.brief-checks label{display:flex;align-items:center;gap:8px;color:#c7d5e6;font-size:13px;font-weight:500}.brief-checks input{accent-color:#168bff;width:16px;height:16px}.form-success{display:none;padding:12px;border-radius:10px;background:#0d302b;color:#8df3d7;margin-top:12px;font-size:13px}
+
+    @keyframes neonPulse{0%,100%{box-shadow:0 0 0 rgba(36,121,255,0)}50%{box-shadow:0 0 34px rgba(36,121,255,.18)}}
+    @keyframes floatGlow{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    .brand-mark{animation:neonPulse 4s ease-in-out infinite}
+    .orb{animation:floatGlow 7s ease-in-out infinite}
+    .service-card,.project-card,.feature-card,.blog-card{position:relative;overflow:hidden}
+    .service-card:before,.project-card:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent);opacity:.65}
+    .print-layout{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;max-width:1000px}
+    .print-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+    .print-point{padding:15px;border:1px solid #233b58;border-radius:15px;background:linear-gradient(145deg,#0d1a2b,#080f1c)}
+    .print-point b{display:block;color:var(--cyan);margin-bottom:4px}
+    .print-point span{font-size:12px;color:var(--muted)}
+    .social-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px;border:1px solid #263d65;border-radius:24px;background:radial-gradient(ellipse at 90% 10%,#6435bf30,transparent 38%),linear-gradient(130deg,#0d1d33,#080b16)}
+    .social-banner h3{font-size:clamp(23px,3vw,34px);margin:6px 0;line-height:1.15}
+    .social-banner p{color:var(--muted);margin:0;max-width:650px}
+    .social-actions{display:flex;flex-wrap:wrap;gap:10px;flex-shrink:0}
+    .instagram-link{border-color:#824cff;background:linear-gradient(105deg,#17102e,#0a1528)}
+    .service-icon{box-shadow:inset 0 0 20px #148aff14}
+    .btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+    @media(max-width:900px){.print-layout{grid-template-columns:1fr}.social-banner{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
     footer{padding:28px 0;border-top:1px solid #17283c;color:#91a3ba;font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.admin-note{font-size:11px;color:#62768e;margin-top:14px}
+    @media(max-width:1000px){.menu-btn{display:block}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;padding:16px 22px 22px;background:#07101df7;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 0}.nav-cta{display:none}}
     @media(max-width:900px){.navlinks{gap:13px}.hero-grid{grid-template-columns:1fr}.hero{padding-top:55px}.visual{min-height:320px}.device-stage{max-width:600px}.services-grid,.portfolio-grid,.blog-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.section-head{align-items:start;flex-direction:column}.split,.contact-wrap{grid-template-columns:1fr}}
     @media(max-width:650px){.container{width:min(100% - 28px,1160px)}.nav{height:68px}.brand{font-size:13px}.brand-mark{width:37px;height:37px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:16px 22px 22px;background:#07101df7;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:8px 0}.nav-cta{display:none}.hero{padding:45px 0 50px}.hero h1{font-size:43px}.hero p{font-size:15px}.visual{min-height:280px}.device-stage{min-height:290px;padding:14px}.mock-window{padding:13px;margin-top:13px}.mock-window h3{font-size:18px}.mock-cards{gap:5px}.mock-card{padding:6px;height:70px}.floating-tag{right:-5px;bottom:-3px;padding:10px}section{padding:55px 0}.services-grid,.portfolio-grid,.blog-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.brief-checks{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-actions .btn{width:100%}.trust-row{gap:10px}.about-panel,.contact-form,.contact-info{padding:21px}}
   </style>
@@ -33,7 +59,7 @@
     <a class="brand" href="#inicio" aria-label="Gabriel Devs início"><span class="brand-mark">GD</span><span>GABRIEL DEVS<small>SOLUÇÕES EM T.I.</small></span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">☰ Menu</button>
     <nav class="navlinks" id="navlinks">
-      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#blog">Ideias</a><a href="#briefing">Briefing</a><a href="#contato">Contato</a>
+      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#impressao3d">Impressão 3D</a><a href="#portfolio">Portfólio</a><a href="#instagram">Instagram</a><a href="#briefing">Briefing</a><a href="#contato">Contato</a>
     </nav>
     <a class="btn btn-outline nav-cta" href="https://wa.me/5511945494914?text=Ol%C3%A1%2C%20Gabriel%20Devs!%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">◉ Falar no WhatsApp ↗</a>
   </div>
@@ -45,7 +71,7 @@
       <div>
         <span class="eyebrow">Tecnologia, criatividade e resultado</span>
         <h1>Sua ideia,<br>em <span class="gradient-text">soluções reais.</span></h1>
-        <p>Na Gabriel Devs, transformamos ideias em sites, catálogos online, cardápios digitais, soluções NFC e experiências digitais feitas para o seu negócio.</p>
+        <p>Na Gabriel Devs, transformamos ideias em sites, catálogos online, cardápios digitais, soluções NFC e QR Code, além de impressões 3D personalizadas para seu projeto.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contato">Solicitar um orçamento <span>→</span></a>
           <a class="btn btn-whatsapp" href="https://wa.me/5511945494914?text=Ol%C3%A1%2C%20Gabriel%20Devs!%20Quero%20conhecer%20as%20solu%C3%A7%C3%B5es." target="_blank" rel="noopener">◉ Falar no WhatsApp</a>
@@ -59,7 +85,7 @@
             <span class="eyebrow">Seu próximo projeto começa aqui</span>
             <h3>Seu negócio online,<br>do seu jeito.</h3>
             <p>Sites e experiências digitais que conectam sua marca aos clientes.</p>
-            <div class="mock-pills"><span>Sites</span><span>Catálogos</span><span>Cardápios</span><span>NFC</span></div>
+            <div class="mock-pills"><span>Sites</span><span>Catálogos</span><span>Cardápios</span><span>NFC / QR</span><span>Impressão 3D</span></div>
             <div class="mock-cards"><div class="mock-card"><b>01</b><small>Planejar</small></div><div class="mock-card"><b>02</b><small>Criar</small></div><div class="mock-card"><b>03</b><small>Publicar</small></div></div>
           </div>
           <div class="floating-tag"><strong>GD ◉</strong>Toque. Conecte.<br>Descubra.</div>
@@ -78,13 +104,36 @@
         <article class="service-card"><div class="service-icon">◉</div><h3>Tags NFC e QR Code</h3><p>Facilite o acesso a links, redes sociais, contatos, avaliações e páginas do seu comércio com um toque ou leitura.</p><a class="text-link service-ask" href="#contato" data-service="Tags NFC e QR Code">Conhecer NFC ↗</a></article>
         <article class="service-card"><div class="service-icon">⚙</div><h3>Sistemas personalizados</h3><p>Ferramentas digitais planejadas para resolver necessidades específicas e simplificar processos do dia a dia.</p><a class="text-link service-ask" href="#contato" data-service="Sistema personalizado">Planejar sistema ↗</a></article>
         <article class="service-card"><div class="service-icon">✦</div><h3>Ideias e experiências</h3><p>Tem uma ideia diferente? Vamos estudar a necessidade e pensar juntos em uma solução digital viável.</p><a class="text-link service-ask" href="#contato" data-service="Nova ideia digital">Tirar ideia do papel ↗</a></article>
+        <article class="service-card"><div class="service-icon">▧</div><h3>Impressão 3D</h3><p>Peças decorativas, suportes, organizadores, acessórios e protótipos sob demanda, sujeitos à avaliação de viabilidade.</p><a class="text-link service-ask" href="#contato" data-service="Impressão 3D">Orçar impressão 3D ↗</a></article>
       </div>
     </div>
   </section>
 
+
+  <section id="impressao3d">
+    <div class="container print-layout">
+      <div>
+        <span class="eyebrow">Do digital para o físico</span>
+        <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.045em;margin:12px 0">Sua ideia ganha forma com a <span class="gradient-text">impressão 3D.</span></h2>
+        <p style="color:var(--muted)">Transforme um conceito em um objeto físico. Avaliamos projetos de peças personalizadas, itens decorativos, organizadores, suportes, acessórios e protótipos.</p>
+        <div class="print-points">
+          <div class="print-point"><b>Peças personalizadas</b><span>Projetos conforme a necessidade.</span></div>
+          <div class="print-point"><b>Protótipos</b><span>Modelos para avaliar ideias.</span></div>
+          <div class="print-point"><b>Organização</b><span>Suportes e organizadores sob medida.</span></div>
+          <div class="print-point"><b>Presentes e decoração</b><span>Peças criativas a consultar.</span></div>
+        </div>
+        <p class="form-note">Material, dimensões, acabamento, prazo e viabilidade precisam ser avaliados antes de confirmar o orçamento.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary service-ask" href="#contato" data-service="Impressão 3D">Solicitar orçamento de impressão 3D ↗</a>
+          <a class="btn btn-outline" href="https://wa.me/5511945494914?text=Ol%C3%A1%2C%20Gabriel%20Devs!%20Quero%20consultar%20uma%20impress%C3%A3o%203D." target="_blank" rel="noopener">Enviar minha ideia ↗</a>
+        </div>
+      </div>
+</div>
+  </section>
+
   <section id="sobre">
     <div class="container split">
-      <div class="about-panel"><span class="eyebrow">Sobre a Gabriel Devs</span><h3>Mais do que desenvolver. Criar soluções que façam sentido.</h3><p>A Gabriel Devs é uma marca de tecnologia focada em transformar necessidades reais em experiências digitais claras, modernas e acessíveis.</p><p>O objetivo é ajudar negócios a apresentar seus serviços, divulgar produtos e se conectar melhor com seus clientes por meio da tecnologia.</p><ul class="check-list"><li>Projetos pensados para cada necessidade</li><li>Experiência adaptada para celular e computador</li><li>Comunicação próxima durante o planejamento</li><li>Foco em clareza, usabilidade e presença digital</li></ul></div>
+      <div class="about-panel"><span class="eyebrow">Sobre a Gabriel Devs</span><h3>Mais do que desenvolver. Criar soluções que façam sentido.</h3><p>A Gabriel Devs é uma marca de tecnologia focada em transformar necessidades reais em experiências digitais claras, modernas e acessíveis.</p><p>O objetivo é ajudar negócios a apresentar seus serviços, divulgar produtos, desenvolver projetos personalizados e explorar a impressão 3D para transformar ideias em objetos físicos.</p><ul class="check-list"><li>Projetos pensados para cada necessidade</li><li>Experiência adaptada para celular e computador</li><li>Comunicação próxima durante o planejamento</li><li>Foco em clareza, usabilidade e presença digital</li></ul></div>
       <div><span class="eyebrow">Como podemos ajudar</span><h2 style="font-size:36px;line-height:1.15;letter-spacing:-.04em">Sua empresa merece uma presença digital à altura.</h2><p style="color:var(--muted)">Cada projeto começa entendendo seu objetivo, seu público e o que precisa funcionar melhor. A partir disso, definimos escopo, prazo e investimento antes de começar.</p><div class="stat-grid"><div class="stat"><b>Web</b><span>Sites responsivos e páginas digitais</span></div><div class="stat"><b>NFC</b><span>Conexões rápidas para o comércio</span></div><div class="stat"><b>UX</b><span>Experiências fáceis de usar</span></div><div class="stat"><b>Ideias</b><span>Soluções criativas sob medida</span></div></div></div>
     </div>
   </section>
@@ -96,6 +145,9 @@
         <article class="project-card"><div class="project-art"><div class="screen"><i></i><em></em><em></em><em></em></div></div><span class="project-type">Website</span><h3>Site institucional</h3><p>Apresente sua empresa, seus serviços e canais de contato em uma experiência profissional.</p><a class="text-link service-ask" href="#contato" data-service="Site institucional">Quero algo assim ↗</a></article>
         <article class="project-card"><div class="project-art" style="background:radial-gradient(circle at 70% 30%,#8b42c888,transparent 42%),linear-gradient(135deg,#112e42,#151029)"><div class="screen"><i style="background:#a76bff"></i><em style="background:linear-gradient(145deg,#8243b9,#e7779b)"></em><em style="background:linear-gradient(145deg,#2b75a2,#39c7c2)"></em><em style="background:linear-gradient(145deg,#c67c35,#f0ce6a)"></em></div></div><span class="project-type">Comércio digital</span><h3>Catálogo de produtos</h3><p>Mostre produtos, organize categorias e facilite o compartilhamento pelo WhatsApp.</p><a class="text-link service-ask" href="#contato" data-service="Catálogo online">Quero algo assim ↗</a></article>
         <article class="project-card"><div class="project-art" style="background:radial-gradient(circle at 70% 30%,#087b7a88,transparent 42%),linear-gradient(135deg,#102d3a,#10142b)"><div class="screen" style="width:42%;height:90%;border-radius:15px"><i style="width:60%"></i><em style="width:90%;height:25px;margin-bottom:4px"></em><em style="width:90%;height:25px;margin-bottom:4px"></em><em style="width:90%;height:25px"></em></div></div><span class="project-type">NFC e QR Code</span><h3>Experiência por aproximação</h3><p>Direcione clientes para cardápios, contatos, avaliações ou páginas específicas.</p><a class="text-link service-ask" href="#contato" data-service="Tags NFC e QR Code">Quero algo assim ↗</a></article>
+        <article class="project-card"><div class="project-art" style="background:radial-gradient(circle at 65% 20%,#743dff88,transparent 42%),linear-gradient(135deg,#081a30,#17102c)"><div style="font-size:60px;filter:drop-shadow(0 0 18px #2479ff);color:#17c9ff">⬡</div></div><span class="project-type">Manufatura digital</span><h3>Impressão 3D personalizada</h3><p>Peças, organizadores, suportes e protótipos conforme análise do projeto.</p><a class="text-link service-ask" href="#contato" data-service="Impressão 3D">Consultar impressão 3D ↗</a></article>
+        <article class="project-card"><div class="project-art" style="background:radial-gradient(circle at 70% 30%,#2668e088,transparent 42%),linear-gradient(135deg,#10203a,#0a0e1a)"><div class="screen"><i></i><em></em><em></em><em></em></div></div><span class="project-type">Restaurantes e delivery</span><h3>Cardápio digital</h3><p>Uma forma prática de organizar produtos, descrições e informações em dispositivos móveis.</p><a class="text-link service-ask" href="#contato" data-service="Cardápio digital">Criar cardápio ↗</a></article>
+        <article class="project-card"><div class="project-art" style="background:radial-gradient(circle at 70% 30%,#9d4dff70,transparent 42%),linear-gradient(135deg,#10142d,#0b1e2e)"><div class="screen"><i style="background:#a76bff"></i><em style="background:linear-gradient(145deg,#164ca7,#8443d4)"></em><em style="background:linear-gradient(145deg,#0c8ab0,#39c7c2)"></em><em style="background:linear-gradient(145deg,#c67c35,#f0ce6a)"></em></div></div><span class="project-type">Presença digital</span><h3>Catálogo online</h3><p>Apresente produtos por categoria e facilite o compartilhamento com os clientes.</p><a class="text-link service-ask" href="#contato" data-service="Catálogo online">Criar catálogo ↗</a></article>
       </div>
     </div>
   </section>
@@ -113,6 +165,21 @@
     </div>
   </section>
 
+
+
+  <section id="instagram">
+    <div class="container social-banner">
+      <div>
+        <span class="eyebrow">Acompanhe a marca</span>
+        <h3>Ideias, projetos e novidades no Instagram.</h3>
+        <p>Siga a Gabriel Devs para acompanhar soluções digitais, conteúdos sobre tecnologia e projetos de impressão 3D. O perfil configurado aqui é @gabrieldevs; atualize o link se seu nome de usuário for diferente.</p>
+      </div>
+      <div class="social-actions">
+        <a class="btn instagram-link" href="https://www.instagram.com/gabrieldevs/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram da Gabriel Devs">◎ Acompanhar no Instagram ↗</a>
+        <a class="btn btn-primary" href="https://wa.me/5511945494914?text=Ol%C3%A1%2C%20Gabriel%20Devs!%20Quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer">Pedir orçamento ↗</a>
+      </div>
+    </div>
+  </section>
 
   <section id="briefing">
     <div class="container">
@@ -137,7 +204,7 @@
             <div class="field"><label for="bEmail">E-mail para contato *</label><input id="bEmail" type="email" required placeholder="voce@empresa.com"></div>
             <div class="field"><label for="bPhone">WhatsApp (opcional)</label><input id="bPhone" placeholder="DDD + telefone"></div>
             <div class="field"><label for="bCity">Cidade/região</label><input id="bCity" placeholder="Ex.: Itu - SP"></div>
-            <div class="field"><label for="bType">Tipo de projeto *</label><select id="bType" required><option value="">Escolha uma opção</option><option>Site institucional</option><option>Loja virtual</option><option>Catálogo online</option><option>Cardápio digital</option><option>Tags NFC / QR Code</option><option>Sistema ou ferramenta personalizada</option><option>Aplicativo</option><option>Automação / integração</option><option>Outra ideia</option></select></div>
+            <div class="field"><label for="bType">Tipo de projeto *</label><select id="bType" required><option value="">Escolha uma opção</option><option>Site institucional</option><option>Loja virtual</option><option>Catálogo online</option><option>Cardápio digital</option><option>Tags NFC / QR Code</option><option>Impressão 3D / peça personalizada</option><option>Sistema ou ferramenta personalizada</option><option>Aplicativo</option><option>Automação / integração</option><option>Outra ideia</option></select></div>
             <div class="field full"><label for="bSummary">Explique sua ideia *</label><textarea id="bSummary" required placeholder="O que você quer criar e qual problema precisa resolver?"></textarea></div>
             <div class="field full"><label>Quais recursos você precisa? (marque os que se aplicam)</label>
               <div class="brief-checks">
@@ -153,6 +220,7 @@
                 <label><input type="checkbox" name="features" value="Blog / notícias"> Blog / notícias</label>
                 <label><input type="checkbox" name="features" value="SEO básico"> SEO básico</label>
                 <label><input type="checkbox" name="features" value="NFC / QR Code"> NFC / QR Code</label>
+                <label><input type="checkbox" name="features" value="Impressão 3D / protótipo personalizado"> Impressão 3D / protótipo personalizado</label>
               </div>
             </div>
             <div class="field"><label for="bDevices">Onde deve funcionar?</label><select id="bDevices"><option>Celular e computador</option><option>Celular, tablet e computador</option><option>Web e aplicativo Android/iOS</option><option>Somente celular</option><option>Outro / a definir</option></select></div>
@@ -180,7 +248,7 @@
             <div class="field"><label for="name">Seu nome *</label><input id="name" name="name" required placeholder="Como podemos te chamar?"></div>
             <div class="field"><label for="business">Empresa (opcional)</label><input id="business" name="business" placeholder="Nome do negócio"></div>
             <div class="field"><label for="email">E-mail (opcional)</label><input id="email" name="email" type="email" placeholder="voce@empresa.com"></div>
-            <div class="field"><label for="service">O que você precisa? *</label><select id="service" name="service" required><option value="">Selecione um serviço</option><option>Criação de sites</option><option>Catálogo online</option><option>Cardápio digital</option><option>Tags NFC e QR Code</option><option>Sistema personalizado</option><option>Nova ideia digital</option><option>Outro projeto</option></select></div>
+            <div class="field"><label for="service">O que você precisa? *</label><select id="service" name="service" required><option value="">Selecione um serviço</option><option>Criação de sites</option><option>Catálogo online</option><option>Cardápio digital</option><option>Tags NFC e QR Code</option><option>Impressão 3D</option><option>Sistema personalizado</option><option>Nova ideia digital</option><option>Outro projeto</option></select></div>
             <div class="field full"><label for="details">Conte um pouco sobre o projeto *</label><textarea id="details" name="details" required placeholder="O que você gostaria de criar? Quais são seus objetivos?"></textarea></div>
             <div class="field full"><button class="btn btn-primary" type="submit">Preparar mensagem no WhatsApp ↗</button><span class="form-note">Este formulário abre o WhatsApp com a mensagem preenchida. Ele não armazena nem envia os dados para um servidor.</span><div class="form-success" id="formSuccess" role="status">Mensagem preparada. Se o WhatsApp não abrir, confira se o navegador bloqueou a nova janela.</div></div>
           </div>
@@ -189,14 +257,14 @@
     </div>
   </section>
 </main>
-<footer><div class="container footer-row"><span>© <span id="year"></span> Gabriel Devs. Todos os direitos reservados.</span><span>Tecnologia • Criatividade • Soluções digitais</span></div><div class="container admin-note">Protótipo inicial: painel administrativo, publicações reais do blog, mapa incorporado e armazenamento de formulários ainda precisam de integração de backend.</div></footer>
+<footer><div class="container footer-row"><span>© <span id="year"></span> Gabriel Devs. Todos os direitos reservados.</span><span>Tecnologia • Criatividade • Soluções digitais • Impressão 3D · <a href="https://www.instagram.com/gabrieldevs/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></span></div><div class="container admin-note">Site estático para GitHub Pages. O briefing e o formulário de contato montam mensagens do WhatsApp; não armazenam dados em servidor. O link do Instagram está configurado como @gabrieldevs e pode ser ajustado se o usuário real for diferente.</div></footer>
 <script>
   const menuBtn=document.getElementById('menuBtn');
   const navlinks=document.getElementById('navlinks');
   menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
   navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
   document.getElementById('year').textContent=new Date().getFullYear();
-  document.querySelectorAll('.service-ask').forEach(link=>link.addEventListener('click',()=>{const select=document.getElementById('service');const option=[...select.options].find(o=>o.text===link.dataset.service);if(option)select.value=option.value;}));
+  document.querySelectorAll('.service-ask').forEach(link=>link.addEventListener('click',()=>{const select=document.getElementById('service');const wanted=(link.dataset.service||'').trim().toLocaleLowerCase('pt-BR');const aliases={'site institucional':'criação de sites','sistema ou ferramenta personalizada':'sistema personalizado','sistema personalizado':'sistema personalizado','tags nfc / qr code':'tags nfc e qr code'};const target=aliases[wanted]||wanted;const options=[...select.options];const option=options.find(o=>o.text.trim().toLocaleLowerCase('pt-BR')===target)||options.find(o=>o.text.toLocaleLowerCase('pt-BR').includes(target)||target.includes(o.text.toLocaleLowerCase('pt-BR')));if(option)select.value=option.value;}));
 
   document.getElementById('briefingForm').addEventListener('submit',function(e){
     e.preventDefault();
